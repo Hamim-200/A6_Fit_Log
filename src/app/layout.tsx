@@ -1,0 +1,39 @@
+import type { Metadata } from "next";
+import { Oswald } from "next/font/google";
+
+import "./globals.css";
+import NavBar from "./component/NavBar";
+import Footer from "./component/Footer";
+import UserContextProvider from "./component/User Context/UserContext";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "FITLOG",
+  description: "Fitness Workout App",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${oswald.className} min-h-full flex flex-col`}>
+        <UserContextProvider>
+          <NavBar />
+          {children}
+          <Footer />
+          <ToastContainer theme="dark" position="top-center" />
+        </UserContextProvider>
+      </body>
+    </html>
+  );
+}
