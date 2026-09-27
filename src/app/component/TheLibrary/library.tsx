@@ -8,23 +8,24 @@ const Library = async () => {
     const posts: iData[] = await data.json();
 
     return (
-        <div className="min-h-screen bg-[#0b0c0f]">
+        <div id="library" className="min-h-screen bg-[#0a0b0d]">
 
-            {/* ================= HEaD ================= */}
-            <div className="min-h-[78px] w-full border-l-4 border-[#15171b] bg-[#0b0c0f] px-[14px] py-[22px]">
-                <h1 className="font-[family-name:var(--font-oswald)] text-[20px] font-bold uppercase leading-[20px] text-white">
-                    THE LIBRARY
+            <div className="mx-auto max-w-7xl px-6 pb-2 pt-10">
+                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#baff00]">
+                    Twelve Lifts
+                </p>
+
+                <h1 className="font-[family-name:var(--font-oswald)] text-3xl font-bold uppercase leading-tight text-white sm:text-4xl">
+                    The Library
                 </h1>
 
-                <p className="font-[family-name:var(--font-inter)] text-[9px] leading-[12px] text-[#777b84]">
+                <p className="font-[family-name:var(--font-inter)] mt-2 text-[13px] text-[#9a9ca4]">
                     Twelve lifts covering every major muscle group.
                 </p>
             </div>
 
-            {/* ================= CARD================= */}
-
             <Suspense fallback={<Loading />}>
-                <div className="grid grid-cols-1 gap-6 p-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-8 sm:grid-cols-2 lg:grid-cols-3">
                     {posts.map((post) => (
                         <LibCard key={post.id} {...post} />
                     ))}

@@ -20,7 +20,6 @@ const detailsPage = async ({ params }: { params: Promise<{ libraryId: string }> 
 
                 <div className="grid min-h-[calc(100vh-64px)] grid-cols-1 gap-10 lg:grid-cols-[46%_1fr] lg:gap-12">
 
-                    {/* ================= IMAGE ================= */}
                     <div className="relative min-h-[550px] w-full overflow-hidden rounded-2xl lg:min-h-full">
                         <Image
                             src={post.image}
@@ -32,10 +31,8 @@ const detailsPage = async ({ params }: { params: Promise<{ libraryId: string }> 
                         />
                     </div>
 
-                    {/* ================= DETAILS ================= */}
                     <div className="flex flex-col py-2 lg:py-5">
 
-                        {/* TITLE */}
                         <div>
                             <h1 className="text-4xl font-extrabold uppercase tracking-tight sm:text-5xl lg:text-6xl">
                                 {post.name}
@@ -46,7 +43,6 @@ const detailsPage = async ({ params }: { params: Promise<{ libraryId: string }> 
                             </p>
                         </div>
 
-                        {/* MUSCLE GROUPS */}
                         <div className="mt-6 flex flex-wrap gap-3">
                             {post.muscleGroups?.map((muscle, index) => (
                                 <span
@@ -58,7 +54,6 @@ const detailsPage = async ({ params }: { params: Promise<{ libraryId: string }> 
                             ))}
                         </div>
 
-                        {/* ================= STATS ================= */}
                         <div className="mt-8 overflow-hidden rounded-2xl border border-[#292d36] bg-[#15181e]">
 
                             <div className="divide-y divide-[#292d36]">
@@ -101,7 +96,6 @@ const detailsPage = async ({ params }: { params: Promise<{ libraryId: string }> 
                             </div>
                         </div>
 
-                        {/* ================= INSTRUCTIONS ================= */}
                         <div className="mt-8">
 
                             <h2 className="text-lg font-bold uppercase tracking-wide">
@@ -118,7 +112,6 @@ const detailsPage = async ({ params }: { params: Promise<{ libraryId: string }> 
 
                         </div>
 
-                        {/* ================= BUTTONS ================= */}
                         <ActionButtons post={post} />
 
                     </div>

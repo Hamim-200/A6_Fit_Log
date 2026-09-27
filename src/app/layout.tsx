@@ -6,8 +6,8 @@ import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import UserContextProvider from "./component/User Context/UserContext";
 
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const oswald = Oswald({
   subsets: ["latin"],
