@@ -15,8 +15,8 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "FITLOG",
-  description: "Fitness Workout App",
+  title: "FITLOG | 2026",
+  description: "Fitness App",
 };
 
 export default function RootLayout({
