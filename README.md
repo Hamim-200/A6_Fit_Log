@@ -2,6 +2,10 @@
 
 A dark, no-nonsense gym companion built with Next.js. Browse a library of workouts, dig into the details of each lift, and build out today's training plan — with everything you save persisted right in the browser.
 
+**Live site:** https://a6-fit-log-dun.vercel.app/
+
+
+
 
 ## Overview
 
